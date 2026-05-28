@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFDF73" />
+      <stop offset="25%" stop-color="#C69320" />
+      <stop offset="50%" stop-color="#FFDF73" />
+      <stop offset="75%" stop-color="#A67B1E" />
+      <stop offset="100%" stop-color="#FFDF73" />
+    </linearGradient>
+    <linearGradient id="darkGold" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A67B1E" />
+      <stop offset="50%" stop-color="#FFF2B2" />
+      <stop offset="100%" stop-color="#A67B1E" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  
+  <!-- Ribbons -->
+  <polygon points="25,50 15,90 35,80 50,90" fill="#8B0000" />
+  <polygon points="75,50 85,90 65,80 50,90" fill="#8B0000" />
+  <polygon points="30,50 20,85 35,77 45,85" fill="#600000" />
+  <polygon points="70,50 80,85 65,77 55,85" fill="#600000" />
+
+  <!-- Outer starburst (32-point polygon for a more realistic medal edge) -->
+  <path d="M50,2 L55,9 L64,6 L66,15 L76,14 L76,23 L85,25 L82,34 L90,39 L85,47 L92,54 L85,61 L88,70 L78,72 L78,81 L68,80 L62,88 L54,84 L46,90 L40,83 L30,86 L28,76 L18,76 L19,67 L11,62 L15,54 L8,46 L14,39 L9,30 L18,27 L18,17 L27,18 L32,10 L39,15 Z" fill="url(#gold)" filter="url(#shadow)" />
+  
+  <!-- Inner layers -->
+  <circle cx="50" cy="46" r="32" fill="url(#darkGold)" />
+  <circle cx="50" cy="46" r="28" fill="#111" />
+  <circle cx="50" cy="46" r="26" fill="none" stroke="url(#gold)" stroke-width="1.5" stroke-dasharray="2,2" />
+  
+  <!-- Text -->
+  <text x="50" y="44" font-family="'Outfit', sans-serif" font-size="12" font-weight="900" fill="url(#gold)" text-anchor="middle" letter-spacing="0.5">100%</text>
+  <text x="50" y="56" font-family="'Outfit', sans-serif" font-size="10" font-weight="800" fill="url(#gold)" text-anchor="middle" letter-spacing="1">WAGYU</text>
+</svg>
