@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (checkoutBtn) {
     checkoutBtn.addEventListener('click', () => {
       if (cart.length === 0) return;
-      
+
       if (checkoutModal) {
         checkoutModal.classList.add('active');
       }
@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (closeCheckoutModal) {
     closeCheckoutModal.addEventListener('click', () => checkoutModal.classList.remove('active'));
   }
-  
+
   if (checkoutModal) {
     checkoutModal.addEventListener('click', (e) => {
       if (e.target === checkoutModal) checkoutModal.classList.remove('active');
@@ -356,9 +356,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       message += `\nAguardo as instruções para envio e pagamento.`;
 
-      const whatsappUrl = `https://wa.me/5511911212687?text=${encodeURIComponent(message)}`;
+      const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
-      
+
       checkoutModal.classList.remove('active');
     });
   }
@@ -368,14 +368,14 @@ document.addEventListener('DOMContentLoaded', () => {
   dynamicWaBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      
+
       const hour = new Date().getHours();
       let greeting = 'Boa noite';
       if (hour >= 5 && hour < 12) greeting = 'Bom dia';
       else if (hour >= 12 && hour < 18) greeting = 'Boa tarde';
-      
+
       const message = `Olá, ${greeting}! Gostaria de fazer um pedido.`;
-      const whatsappUrl = `https://wa.me/5511911212687?text=${encodeURIComponent(message)}`;
+      const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
     });
   });
